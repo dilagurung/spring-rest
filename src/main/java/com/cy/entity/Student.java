@@ -1,16 +1,31 @@
 package com.cy.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="student")
+
 public class Student
 {
 @Id
+
 private Long id;
+@Column(name="teacher")
+
 private String name;
+@Column(unique=true)
+private String library_id;
+
+
+public String getLibrary_id() {
+	return library_id;
+}
+public void setLibrary_id(String library_id) {
+	this.library_id = library_id;
+}
 /**
  * @return the id
  */

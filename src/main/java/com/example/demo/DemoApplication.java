@@ -7,10 +7,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-@ComponentScan({"com.example.demo", "service"})	
-@EnableJpaRepositories(basePackages = "repo")
+//@ComponentScan({"com.example.demo","com.job.service"})	
+@EnableJpaRepositories(basePackages = "com.job.repository")
 @EntityScan(basePackages = "com.cy.entity")
-//@EnableAutoConfiguration
+@ComponentScan(basePackages="com")
+@EnableAutoConfiguration
 
 @SpringBootApplication
 public class DemoApplication {
